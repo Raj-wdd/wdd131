@@ -8,7 +8,6 @@ body {
 }
 
 .container {
-    background-color: #fff;
     padding: 60px;
     max-width: 600px;
     margin: 0 auto;
@@ -65,4 +64,12 @@ footer.logo {
 .logo img {
     width: 150px;
     height: auto;
+}
+
+.dark {
+background-color: #333;
+color: white;
+}
+.dark h2{
+color: rgb(160,212,237);
 }
