@@ -18,11 +18,13 @@ body {
   padding: 0;
 }
 
-a:link, a:visited {
+a:link,
+a:visited {
   color: var(--accent-color);
 }
 
-header, footer {
+header,
+footer {
   background-color: var(--primary-color);
   color: var(--text-light);
   padding: 1rem;
@@ -55,6 +57,53 @@ img {
   cursor: pointer;
 }
 
+/* Hide class for mobile nav toggle */
+.menu.hide {
+  display: none;
+}
+
+/* Modal viewer styles */
+dialog#modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  background: transparent;  /* Make sure dialog itself is transparent */
+}
+
+/* This is the key — style the backdrop that appears behind the dialog */
+dialog#modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+dialog#modal img {
+  max-width: 90vw;
+  max-height: 80vh;
+  width: auto;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+}
+
+
+.close-viewer {
+  position: absolute;
+  top: calc(50% - 40vh); /* Adjust vertical to be just outside top of the image */
+  right: calc(50% - 45vw); /* Adjust horizontal to be just outside right of image */
+  transform: translate(50%, -50%);
+  background: #fff;
+  border: none;
+  font-size: 1.5rem;
+  padding: 0.5em;
+  cursor: pointer;
+  border-radius: 3px;
+  z-index: 2;
+}
+
 /* MEDIA QUERIES */
 @media (min-width: 700px) {
   .gallery {
@@ -77,5 +126,9 @@ img {
 
   #menu-button {
     display: none;
+  }
+
+  nav ul.menu.hide {
+    display: flex !important; /* override hide for large screens */
   }
 }
