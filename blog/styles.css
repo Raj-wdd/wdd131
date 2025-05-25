@@ -1,0 +1,138 @@
+/* Base styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: white;
+}
+
+/* Header */
+header {
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+}
+
+header h1 {
+  font-family: 'Georgia', serif;
+  font-size: 2rem;
+  margin: 0 0 10px 0; /* Adds spacing between the title and the nav links */
+  text-align: center;
+}
+
+.main-nav {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+}
+
+.main-nav ul {
+  display: grid;
+  grid-template-columns: 80px 80px 80px;
+  justify-content: end;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+nav a {
+  text-decoration: none;
+  color: #b33c3c;
+  font-weight: bold;
+}
+
+/* Main layout */
+main {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 30px;
+  padding: 20px;
+  align-items: start;
+}
+
+
+/* Reviews section */
+.reviews {
+  flex: 3;
+}
+
+article {
+  display: flex;
+  border-top: 1px solid #ccc;
+  padding: 20px 0;
+}
+
+.details {
+  flex: 1;
+  text-align: left;
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.content {
+  flex: 3;
+}
+
+.content h2 {
+  color: #b33c3c;
+  font-size: 1.2rem;
+  margin: 0 0 10px;
+}
+
+.content img {
+  float: left;
+  margin-right: 15px;
+  width: 120px;
+  height: auto;
+}
+
+.content p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.content a {
+  color: #0044cc;
+}
+
+/* Filters */
+.filters {
+  flex: 1;
+  padding-top: 10px;
+}
+
+.filters label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+
+
+/* Make everything responsive */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+
+  nav {
+    position: static;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  article {
+    flex-direction: column;
+  }
+
+  .content img {
+    float: none;
+    display: block;
+    margin: 0 auto 15px;
+  }
+}
