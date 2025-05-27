@@ -17,7 +17,7 @@ header {
 header h1 {
   font-family: 'Georgia', serif;
   font-size: 2rem;
-  margin: 0 0 10px 0; /* Adds spacing between the title and the nav links */
+  margin: 0 0 10px 0;
   text-align: center;
 }
 
@@ -38,8 +38,6 @@ header h1 {
   margin: 0;
 }
 
-
-
 nav a {
   text-decoration: none;
   color: #b33c3c;
@@ -53,8 +51,9 @@ main {
   gap: 30px;
   padding: 20px;
   align-items: start;
+  max-width: 800px; /* match width alignment with nav */
+  margin: 0 auto;
 }
-
 
 /* Reviews section */
 .reviews {
@@ -65,16 +64,22 @@ article {
   display: flex;
   border-top: 1px solid #ccc;
   padding: 20px 0;
+  gap: 20px;
 }
 
+/* Details on the left */
 .details {
   flex: 1;
-  text-align: left;
-  font-size: 0.9rem;
+  text-align: right; /* ✅ Right aligned */
+  font-size: 1rem; /* ✅ Slightly increased font size */
   color: #444;
-  line-height: 1.6;
+  line-height: 1.4; /* ✅ Reduced line spacing */
+  border-right: 1px solid #ccc; /* ✅ Right border */
+  padding-right: 15px; /* ✅ Right padding */
+  margin-right: 15px; /* ✅ Space between border and content */
 }
 
+/* Article content on the right */
 .content {
   flex: 3;
 }
@@ -83,11 +88,12 @@ article {
   color: #b33c3c;
   font-size: 1.2rem;
   margin: 0 0 10px;
+  margin-top: 0.2em; /* ✅ Align with date */
 }
 
 .content img {
-  float: left;
-  margin-right: 15px;
+  display: block; /* ✅ Remove float */
+  margin: 0 auto 15px; /* ✅ Center image */
   width: 120px;
   height: auto;
 }
@@ -112,12 +118,11 @@ article {
   margin-bottom: 10px;
 }
 
-
-
-/* Make everything responsive */
+/* Responsive */
 @media (max-width: 768px) {
   main {
-    flex-direction: column;
+    display: block;
+    padding: 10px;
   }
 
   nav {
@@ -128,11 +133,20 @@ article {
 
   article {
     flex-direction: column;
+    padding: 15px 0;
+  }
+
+  .details {
+    text-align: right;
+    border-right: none;
+    padding-right: 0;
+    margin-right: 0;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
   }
 
   .content img {
-    float: none;
-    display: block;
     margin: 0 auto 15px;
   }
 }
