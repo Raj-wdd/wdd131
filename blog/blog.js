@@ -37,6 +37,17 @@ const articles = [
     genre: "Fantasy",
     stars: "⭐⭐⭐⭐⭐"
   },
+  {
+    id:4,
+    title: "Belgariad Book Two: Queen of Sorcery",
+    date: "March 23, 2023",
+    description: "Just an example from my side to understand the code better",
+    imgSrc: "https://m.media-amazon.com/images/I/71D1z4rGhNL._AC_UF1000,1000_QL80_.jpg",
+    imgAlt: "Book Cover for Queen of Sorcery",
+    ages: "12-16",
+    genre: "Fantasy",
+    stars: "⭐⭐⭐⭐"
+  }
 ];
 
 function renderArticles() {
