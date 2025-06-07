@@ -1,0 +1,141 @@
+body {
+    font-family: "Times New Roman", serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+#cc-num::placeholder, 
+#card-holder::placeholder, 
+#exp-month::placeholder, 
+#exp-year::placeholder, 
+#cvc::placeholder {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #999;
+}
+
+#ccGrid {
+    display: grid;
+    grid-template-columns: 100px 275px 100px;
+    grid-template-rows: 30px 200px 30px 40px;
+    gap: 25px;
+    justify-self: center;
+    margin-top: 200px;
+}
+
+#ccFront {
+    background-color: #e0e0e0;
+    grid-column: 1/3;
+    grid-row: 1/3;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+
+    display: grid;
+    grid-template-columns: 230px 105px;
+    grid-template-rows: 70px auto auto;
+    padding: 1.2em;
+    gap: 0.5em 1.2em;
+}
+
+#ccFront img {
+    justify-self: end;
+}
+
+.cn {
+    grid-column: 1/3;
+    grid-row: 2/3;
+}
+
+.cn input {
+    width: 98%;
+    height: 2em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0 0.5em;
+}
+
+.ch {
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+.ch input {
+    width: 95%;
+    height: 2em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0 0.5em;
+}
+
+.card-exp {
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+.card-exp input {
+    width: 40%;
+    height: 2em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0 0.5em;
+}
+
+#ccBack {
+    background-color: #e0e0e0;
+    grid-column: 2/4;
+    grid-row: 2/4;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 290px auto;
+    grid-template-rows: 145px auto;
+    padding-top: 1.2em;
+}
+
+#black-line {
+    background-color: black;
+    grid-column: 1/3;
+    grid-row: 1/2;
+    height: 2.5em;
+}
+
+#back-input {
+    grid-column: 2/3;  
+    grid-row: 2/3; 
+}
+
+#back-input input {
+    height: 2em;
+    width: 50%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0 0.5em;
+}
+
+.errorMsg {
+    grid-column: 1/3;
+    grid-row: 4/5;
+    text-align: center;
+    color: lightsalmon;
+    height: 100%;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+button {
+    grid-column: 3/4;
+    grid-row: 4/5;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
