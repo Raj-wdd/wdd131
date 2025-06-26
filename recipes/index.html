@@ -24,36 +24,17 @@
     <h1>RecipeBook</h1>
   </header>
 
-  <main>
-    <form class="search-bar">
-      <label for="search" class="visually-hidden"></label>
-      <input type="text" id="search" placeholder="Find a recipe">
-      <button type="submit" aria-label="Search">
-        🔍
-      </button>
-    </form>
-    <article class="recipe-card">
-      <img src="images/apple-crisp.jpg" alt="Apple Crisp with vanilla ice cream" />
-      <div class="recipe-content">
-        <span class="tag">dessert</span>
-        <h2><a href="#">Apple Crisp</a></h2>
-        <span
-          class="rating"
-          role="img"
-          aria-label="Rating: 4 out of 5 stars"
-        >
-          <span aria-hidden="true">⭐</span>
-          <span aria-hidden="true">⭐</span>
-          <span aria-hidden="true">⭐</span>
-          <span aria-hidden="true">⭐</span>
-          <span aria-hidden="true">☆</span>
-        </span>
-        <p class="description">
-          This apple crisp recipe is a simple yet delicious fall dessert that’s great served warm with vanilla ice cream.
-        </p>
-      </div>
-    </article>
-  </main>
+<main>
+  <form class="search-bar">
+    <label for="search" class="visually-hidden"></label>
+    <input type="text" id="search" placeholder="Find a recipe">
+    <button type="submit" aria-label="Search">
+      🔍
+    </button>
+  </form>
+  <div class="recipe-container"></div>
+</main>
+
 
   <footer>
     <p class="attribution">
@@ -67,6 +48,7 @@
       <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon"></a>
     </div>
   </footer>
+<script type="module" src="scripts.js"></script>
 
 </body>
 </html>
